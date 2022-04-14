@@ -133,12 +133,12 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
   },
   appbar: {
-    background: '#be6a77',
+    background: '#f44336',
     boxShadow: 'none',
     color: 'white'
   },
   loader: {
-    color: '#be6a77 !important',
+    color: '#f44336 !important',
   }
 }));
 export const ImageUpload = () => {
@@ -210,7 +210,7 @@ export const ImageUpload = () => {
     <React.Fragment>
       <AppBar position="static" className={classes.appbar}>
         <Toolbar>
-          <Typography className={classes.title} variant="h6" noWrap>
+          <Typography className={classes.title} variant="h5" noWrap>
           POTATO DISEASE DETECTION USING CNN
           </Typography>
           <div className={classes.grow} />
@@ -249,8 +249,8 @@ export const ImageUpload = () => {
                   <Table className={classes.table} size="small" aria-label="simple table">
                     <TableHead className={classes.tableHead}>
                       <TableRow className={classes.tableRow}>
-                        <TableCell className={classes.tableCell1}>Label:</TableCell>
-                        {/* <TableCell align="right" className={classes.tableCell1}>Confidence:</TableCell> */}
+                        <TableCell className={classes.tableCell1}>Prediction:</TableCell>
+                        <TableCell align="right" className={classes.tableCell1}>Accuracy:</TableCell>
                       </TableRow>
                     </TableHead>
                     <TableBody className={classes.tableBody}>
@@ -258,7 +258,7 @@ export const ImageUpload = () => {
                         <TableCell component="th" scope="row" className={classes.tableCell}>
                           {data.class}
                         </TableCell>
-                        {/* <TableCell align="right" className={classes.tableCell}>{confidence}%</TableCell> */}
+                        <TableCell align="right" className={classes.tableCell}>{confidence}%</TableCell>
                       </TableRow>
                     </TableBody>
                   </Table>
